@@ -1,7 +1,7 @@
 object NewtonsMethod {
   def main(args: Array[String]): Unit = {
-    Console.println("sqrt(42):" + sqrt(42))
-    Console.println("sqrt(42)^2" + Math.pow(sqrt(42), 2))
+    Console.println("sqrt(42) = " + sqrt(42))
+    Console.println("sqrt(42)^2 = " + Math.pow(sqrt(42), 2))
   }
 
   def sqrt(x: Double): Double = sqrtIter(1, x)
