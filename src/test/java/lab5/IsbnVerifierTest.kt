@@ -2,7 +2,6 @@ package lab5
 
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
-import org.junit.Ignore
 import org.junit.Test
 
 class IsbnVerifierTest {
@@ -13,91 +12,91 @@ class IsbnVerifierTest {
         assertTrue(isbnVerifier.isValid("3-598-21508-8"))
     }
 
-    @Ignore
+    //@Ignore
     @Test
     fun invalidIsbnCheckDigit() {
         assertFalse(isbnVerifier.isValid("3-598-21508-9"))
     }
 
-    @Ignore
+    //@Ignore
     @Test
     fun validIsbnNumberWithCheckDigitOfTen() {
         assertTrue(isbnVerifier.isValid("3-598-21507-X"))
     }
 
-    @Ignore
+    //@Ignore
     @Test
     fun checkDigitIsACharacterOtherThanX() {
         assertFalse(isbnVerifier.isValid("3-598-21507-A"))
     }
 
-    @Ignore
+    //@Ignore
     @Test
     fun invalidCharacterInIsbn() {
         assertFalse(isbnVerifier.isValid("3-598-P1581-X"))
     }
 
-    @Ignore
+    //@Ignore
     @Test
     fun xIsOnlyValidAsACheckDigit() {
         assertFalse(isbnVerifier.isValid("3-598-2X507-9"))
     }
 
-    @Ignore
+    //@Ignore
     @Test
     fun validIsbnWithoutSeparatingDashes() {
         assertTrue(isbnVerifier.isValid("3598215088"))
     }
 
-    @Ignore
+    //@Ignore
     @Test
     fun isbnWithoutSeparatingDashesAndXAsCheckDigit() {
         assertTrue(isbnVerifier.isValid("359821507X"))
     }
 
-    @Ignore
+    //@Ignore
     @Test
     fun isbnWithoutCheckDigitAndDashes() {
         assertFalse(isbnVerifier.isValid("359821507"))
     }
 
-    @Ignore
+    //@Ignore
     @Test
     fun tooLongIsbnAndNoDashes() {
         assertFalse(isbnVerifier.isValid("3598215078X"))
     }
 
-    @Ignore
+    //@Ignore
     @Test
     fun isbnWithoutCheckDigit() {
         assertFalse(isbnVerifier.isValid("3-598-21507"))
     }
 
-    @Ignore
+    //@Ignore
     @Test
     fun tooLongIsbn() {
         assertFalse(isbnVerifier.isValid("3-598-21507-XX"))
     }
 
-    @Ignore
+    //@Ignore
     @Test
     fun checkDigitOfXShouldNotBeUsedForZero() {
         assertFalse(isbnVerifier.isValid("3-598-21515-X"))
     }
 
-    @Ignore
+    //@Ignore
     @Test
     fun emptyIsbn() {
         assertFalse(isbnVerifier.isValid(""))
     }
 
-    @Ignore
+    //@Ignore
     @Test
     fun inputIsNineCharacters() {
         assertFalse(isbnVerifier.isValid("134456729"))
     }
 
-    @Ignore
+    //@Ignore
     @Test
     fun invalidCharactersAreNotIgnored() {
         assertFalse(isbnVerifier.isValid("3132P34035"))
